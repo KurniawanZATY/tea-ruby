@@ -1,7 +1,8 @@
 # Gemfile
 source "https://rubygems.org"
-
-ruby "2.7.8"
-
+   
+ruby "2.7"
+   
 gem "bundler"
-gem "npmteazaty", "~> 1.0"
+gem "colorize", "~> 1.1.0"
+
