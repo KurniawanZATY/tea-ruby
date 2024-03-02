@@ -19,12 +19,15 @@ jobs:
         ruby-version: 2.7
 
     - name: Install Bundler
-      run: gem install bundler -v 2.4.22
+      run: gem install bundler
 
     - name: Install dependencies
       run: |
         bundle config set --local path 'vendor/bundle'
         bundle install
+
+    - name: Set up API Key
+      run: echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
 
     - name: Run tests
       run: bundle exec ruby main.rb
