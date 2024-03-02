@@ -1,7 +1,8 @@
 # main.rb
-puts "Hello, world!"
+require 'colorize'
 
-# Accessing the RubyGems API key from the environment variable
-rubygems_api_key = ENV['RUBYGEMS_API_KEY']
+# Accessing the API key from the environment variable
+api_key = ENV['API_KEY']
 
-puts "RubyGems API Key: #{rubygems_api_key}"
+puts "API Key: #{api_key}"
+puts "Hello, world!".colorize(:green)
