@@ -18,6 +18,9 @@ jobs:
       with:
         ruby-version: 2.7
 
+    - name: Set up RubyGems credentials
+      run: echo ":rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}" > ~/.gem/credentials && chmod 600 ~/.gem/credentials
+
     - name: Install Bundler
       run: gem install bundler -v 2.4.22
 
